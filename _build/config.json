@@ -3,7 +3,7 @@
     "lowCaseName": "quasifavicon",
     "description": "A MODX extra for generating favicons and their associated files.",
     "author": "mishantrop",
-    "version": "1.2.4",
+    "version": "1.0.0",
     "package":{
         "actions": [{
             "id": 1
