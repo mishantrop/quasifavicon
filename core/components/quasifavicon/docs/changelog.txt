@@ -1,0 +1,5 @@
+Changelog for quasiFavicon.
+
+quasiFavicon 1.0.0 pl
+==============
+* First commit.
