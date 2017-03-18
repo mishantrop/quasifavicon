@@ -5,10 +5,6 @@
     "author": "mishantrop",
     "version": "1.0.0",
     "package":{
-        "actions": [{
-            "id": 1
-            ,"controller": "index"
-        }],
         "elements": {
             "snippets": [{
                 "name": "quasiFavicon"
