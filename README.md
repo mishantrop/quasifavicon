@@ -1,7 +1,7 @@
 # quasiFavicon
 A MODX extra for generating favicons and their associated files.
 # Usage #
-## Example ##
+## Example 1 ##
 	[[quasiFavicon?
 		&image=`logo.png`
 		&background=`ffffff`
@@ -31,3 +31,12 @@ A MODX extra for generating favicons and their associated files.
 	<meta name="theme-color" content="#0d8ed5"/>
 	<meta name="msapplication-navbutton-color" content="#0d8ed5"/>
 	<meta name="apple-mobile-web-app-status-bar-style" content="#0d8ed5"/>
+	
+## Example 2 - Transparent ##
+	[[quasiFavicon?
+		&image=`logo.png`
+		&background=``
+		&ico=`0`
+		&snippet=`pthumb`
+		&tabColor=`0d8ed5`
+	]]

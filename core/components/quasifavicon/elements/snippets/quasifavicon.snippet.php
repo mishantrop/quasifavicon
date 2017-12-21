@@ -1,4 +1,13 @@
 <?php
+/*
+[[quasiFavicon? 
+    &image=`cat.png`
+    &backgroundColor=`f00`
+    &tabColor=`f00`
+    &ico=`1`
+    &snippet=`pthumb`
+ ]]
+*/
 if (version_compare(PHP_VERSION, '5.4.0') < 0) {
     return '<!-- Your version of PHP is very ancient -->';
 }
@@ -19,7 +28,10 @@ $tabColor = (string)$modx->getOption('tabColor', $scriptProperties, '');
 $sizes = ['57x57', '144x144', '72x72', '144x144', '60x60', '120x120', '76x76', '152x152'];
 foreach ($sizes as $size) {
 	$as = explode('x', $size);
-	$options = 'w='.$as[0].'&h='.$as[1].'&zc=1&f=png&bg='.$backgroundColor;
+	$options = 'w='.$as[0].'&h='.$as[1].'&zc=1&f=png';
+	if (!empty($backgroundColor)) {
+	    $options .= '&bg='.$backgroundColor;
+	}
 	$output .= '<link rel="apple-touch-icon-precomposed" sizes="'.$size.'" href="'.$modx->runSnippet($snippet, ['input' => $image, 'options' => $options]).'" />'.PHP_EOL;
 }
 
@@ -48,7 +60,7 @@ foreach ($sizes as $size) {
 }
 
 // favicon.ico
-if ($ico == 1) {
+if ($ico === 1) {
 	$options = 'w=16&h=16&zc=1&f=ico';
 	if (!empty($backgroundColor)) {
 		$options .= '&bg='.$backgroundColor;
